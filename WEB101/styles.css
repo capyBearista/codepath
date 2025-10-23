@@ -24,8 +24,8 @@
   - If you change the background color of your webpage, you may need to update this rule too.
 ***/
 html {
-    background-color: paleturquoise;
-    color: black;
+  background-color: #e3f0ff;
+  color: #0a2342;
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     /* font-weight: <weight>; */
@@ -47,7 +47,7 @@ html {
 
 body {
     /* Add a background color or image */
-    background-color: var(--bg-color); /* see bottom of file for color variables */
+  background-color: #e3f0ff;
 
     /* Customize the default size, color, and font for text*/
     font-size: 16px;
@@ -71,19 +71,24 @@ body {
 ***/
 h1 {
   /* font-family removed to allow html font-family to apply */
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    color: #fff;
-    text-shadow:
-                -4px 4px blue,
-                -8px 8px purple,
-                -12px 12px pink;
-    text-align: center;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow:
+        -2px 2px #0a2342,
+        -4px 4px #1e3a5c;
+        
+  text-align: center;
+  background: #5dade2;
+  border-radius: 12px;
+  padding: 10px 10px 10px 10px;
 }
 
 h2 {
-    background-color: white;
-    color: black;
+  background-color: #5dade2;
+  color: #0a2342;
+  border-radius: 12px;
+  padding: 10px 10px 10px 10px;
 }
 
 h3 {
@@ -104,30 +109,34 @@ a * {
 }
 
 a:link {
-  color: #684fb5;
+  color: #1e3a5c;
   text-decoration: underline;
+  background-color: #e3f0ff;
+  border-radius: 4px;
+  padding: 2px 4px;
 }
 
 a:visited {
-  color: #482f95;
+  color: #0a2342;
 }
 
 a:hover {
-  color: #28eb76;
+  color: #5dade2;
+  background-color: #d0e6ff;
   text-decoration: none;
 }
 
 a:active {
-  color: #e63946;
+  color: #1e3a5c;
   text-decoration: underline wavy;
 }
 
 
 .header-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
   padding-top: 30px;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -137,10 +146,18 @@ a:active {
 
 .header-item:nth-of-type(1) {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .header-item:nth-of-type(2) {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
 }
 
 #header-img {
@@ -171,16 +188,20 @@ li {
 
 button {
     /* Example Style, replace with your own! */
-    background-color: green;    /* button color */
-    color: white;               /* text color */
-    border: none;               /* hides the default border */
-    padding: 5px 12px;          /* space between button's text and edge */
-    border-radius: 5px;         /* curved edges instead of square */
-    cursor: pointer;            /* makes the cursor change when over button */
+  background-color: #5dade2;
+  color: #0a2342;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(30,58,92,0.08);
+  transition: background 0.2s, color 0.2s;
 }
 
 button:hover {
-    /* Make the button look different when the user hovers over it */
+  background-color: #1e3a5c;
+  color: #fff;
 }
 
 /*** header ***
@@ -195,7 +216,7 @@ button:hover {
 ***/
 
 .header { /* Example A: This styles elements with class="header" */
-    
+  /* Removed empty ruleset for lint compliance */
 }
 
 /*** footer ***
@@ -239,7 +260,7 @@ button:hover {
   left: 0;
   width: 100%;
   margin: 0;
-  background-color: var(--accent-color-dark);
+  background-color: #1e3a5c;
 }
 
 .navbar ul li {
@@ -250,6 +271,7 @@ button:hover {
 .navbar ul li a {
     display: block;
     text-decoration: none;
+    background-color: #5dade2;
     color: white;
     text-align: center;
     padding: 14px 20px;
